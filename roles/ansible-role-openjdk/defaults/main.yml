@@ -1,0 +1,4 @@
+---
+# defaults file for roles/ansible-role-openjdk
+open_jdk_version_centos: "1.8.0"
+open_jdk_version_ubuntu: "8"

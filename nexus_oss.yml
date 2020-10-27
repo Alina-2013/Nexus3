@@ -1,0 +1,17 @@
+- hosts: all
+  tasks:
+  - name:
+    yum:
+      name: openssl
+  - name: Install OpenJDK
+    import_role:
+      name: ansible-role-openjdk
+  #- name: ssl
+   # import_role:
+    #   name: ansible-role-apache
+  #- name: Create Self Signed Certificate
+   # import_role:
+#   name: ansible-ssl-selfsigned
+  - name: ssl
+    import_role:
+       name: ansible-role-nexus3

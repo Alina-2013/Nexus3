@@ -1,0 +1,14 @@
+- name: Install OpenJDK(CentOS)
+  yum:
+    name:
+    - "java-{{ open_jdk_version_centos }}-openjdk"
+    - maven
+    - wget
+  when: ansible_os_family == 'RedHat'
+- name: Install OpenJDK(Ubuntu)
+  apt:
+    name:
+    - "openjdk-{{ open_jdk_version_ubuntu }}-jdk"
+    - maven
+    update_cache: yes
+  when: ansible_os_family == 'Debian'

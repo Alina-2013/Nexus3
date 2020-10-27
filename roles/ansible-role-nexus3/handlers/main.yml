@@ -1,0 +1,5 @@
+---
+# handlers file for roles/ansible-role-nexus3
+- name: 'Restart Nexus'
+  become: true
+  service: name=nexus state=restarted
